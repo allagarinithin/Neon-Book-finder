@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Book Finder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>📚 Neon Book Finder</h1>
+      
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search for books..." />
+        <button onclick="searchBooks()">Search</button>
+      </div>
+
+      <div id="results" class="results"></div>
+
+      <div id="bookModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div id="bookDetails"></div>
+          <div class="review-section">
+            <h3>Add Review</h3>
+            <select id="rating">
+              <option value="5">⭐⭐⭐⭐⭐</option>
+              <option value="4">⭐⭐⭐⭐</option>
+              <option value="3">⭐⭐⭐</option>
+              <option value="2">⭐⭐</option>
+              <option value="1">⭐</option>
+            </select>
+            <textarea id="reviewText" placeholder="Write your review..."></textarea>
+            <button onclick="submitReview()">Submit Review</button>
+          </div>
+          <div id="reviews"></div>
+        </div>
+      </div>
+    </div>
+    <script src="config.js"></script>
+    <script src="storage.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
